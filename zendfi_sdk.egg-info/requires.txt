@@ -1,0 +1,4 @@
+requests>=2.28
+
+[retry]
+tenacity>=8.0
