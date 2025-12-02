@@ -1,6 +1,6 @@
 # ZendFi Python SDK
 
-A lightweight, production-ready Python SDK for the ZendFi API. Supports payments, customers, invoices, webhooks, subscriptions, payment links, and installment plans.
+A lightweight, production-ready Python SDK for the ZendFi API. Supports payments, invoices, webhooks, subscriptions, payment links, and installment plans.
 
 **Package:** [`zendfi-sdk`](https://pypi.org/project/zendfi-sdk) on PyPI  
 **License:** MIT  
@@ -94,33 +94,6 @@ payment = client.payments.retrieve(payment_id="pay_xxx")
 
 # List payments
 payments = client.payments.list(limit=20, starting_after="pay_xxx")
-```
-
-### Customers
-
-```python
-# Create a customer
-customer = client.customers.create(
-    email="customer@example.com",
-    name="John Doe",
-    metadata={"user_id": "usr_123"}
-)
-
-# Retrieve a customer
-customer = client.customers.retrieve(customer_id="cust_xxx")
-
-# Update a customer
-customer = client.customers.update(
-    customer_id="cust_xxx",
-    email="newemail@example.com",
-    name="Jane Doe"
-)
-
-# Delete a customer
-client.customers.delete(customer_id="cust_xxx")
-
-# List customers
-customers = client.customers.list(limit=20)
 ```
 
 ### Invoices

@@ -24,7 +24,6 @@ class ZendFi:
 
         # components
         from .payments import Payments
-        from .customers import Customers
         from .invoices import Invoices
         from .webhooks import Webhooks
         from .subscriptions import Subscriptions
@@ -32,7 +31,6 @@ class ZendFi:
         from .installment_plans import InstallmentPlans
 
         self.payments = Payments(self)
-        self.customers = Customers(self)
         self.invoices = Invoices(self)
         self.webhooks = Webhooks(self)
         self.subscriptions = Subscriptions(self)
