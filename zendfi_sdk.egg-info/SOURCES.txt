@@ -6,7 +6,6 @@ pyproject.toml
 tests/test_client_env.py
 tests/test_customers.py
 tests/test_customers_unit.py
-tests/test_escrows_unit.py
 tests/test_installment_plans_unit.py
 tests/test_invoices.py
 tests/test_invoices_unit.py
@@ -20,7 +19,6 @@ zendfi/_init_.py
 zendfi/client.py
 zendfi/customers.py
 zendfi/errors.py
-zendfi/escrows.py
 zendfi/installment_plans.py
 zendfi/invoices.py
 zendfi/payment_links.py

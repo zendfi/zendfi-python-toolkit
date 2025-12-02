@@ -30,7 +30,6 @@ class ZendFi:
         from .subscriptions import Subscriptions
         from .payment_links import PaymentLinks
         from .installment_plans import InstallmentPlans
-        from .escrows import Escrows
 
         self.payments = Payments(self)
         self.customers = Customers(self)
@@ -39,7 +38,6 @@ class ZendFi:
         self.subscriptions = Subscriptions(self)
         self.payment_links = PaymentLinks(self)
         self.installment_plans = InstallmentPlans(self)
-        self.escrows = Escrows(self)
 
     def _headers(self, extra: Dict[str, str] = None) -> Dict[str, str]:
         h = {

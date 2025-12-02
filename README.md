@@ -1,6 +1,6 @@
 # ZendFi Python SDK
 
-A lightweight, production-ready Python SDK for the ZendFi API. Supports payments, customers, invoices, webhooks, subscriptions, payment links, installment plans, and escrows.
+A lightweight, production-ready Python SDK for the ZendFi API. Supports payments, customers, invoices, webhooks, subscriptions, payment links, and installment plans.
 
 **Package:** [`zendfi-sdk`](https://pypi.org/project/zendfi-sdk) on PyPI  
 **License:** MIT  
@@ -228,33 +228,6 @@ plans = client.installment_plans.list_customer_plans(customer_id="cust_xxx")
 client.installment_plans.cancel(plan_id="inst_xxx")
 ```
 
-### Escrows
-
-```python
-# Create an escrow
-escrow = client.escrows.create(
-    amount=500.0,
-    currency="USD",
-    buyer_id="cust_buyer_xxx",
-    seller_id="cust_seller_xxx"
-)
-
-# Approve an escrow
-escrow = client.escrows.approve(escrow_id="esc_xxx")
-
-# Refund an escrow
-escrow = client.escrows.refund(escrow_id="esc_xxx")
-
-# Dispute an escrow
-escrow = client.escrows.dispute(escrow_id="esc_xxx", reason="Item not received")
-
-# Retrieve an escrow
-escrow = client.escrows.get(escrow_id="esc_xxx")
-
-# List escrows
-escrows = client.escrows.list(limit=20)
-```
-
 ---
 
 ## Testing
@@ -315,68 +288,6 @@ except Exception as e:
 - ✅ Type hints (Python 3.8+)
 - ✅ Comprehensive error handling
 - ✅ Optional tenacity-based retry logic
-
----
-
-## Publishing to PyPI
-
-### Prerequisites
-
-Generate a PyPI API token: https://pypi.org/manage/account/tokens/
-
-### Manual Publish
-
-```bash
-pip install twine
-python -m build
-python -m twine upload dist/*
-```
-
-### Automated via GitHub Actions
-
-1. Add `PYPI_API_TOKEN` secret to your GitHub repository settings
-2. Tag and push a release:
-   ```bash
-   git tag v0.1.0
-   git push origin v0.1.0
-   ```
-3. The `.github/workflows/publish.yml` workflow will build and publish automatically
-
----
-
-## Development
-
-### Setup
-
-```bash
-git clone https://github.com/zendfi/zendfi-python-toolkit.git
-cd zendfi-python-toolkit
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements-dev.txt
-```
-
-### Build
-
-```bash
-python -m build
-```
-
-### Lint & Type Check
-
-```bash
-ruff check .
-mypy zendfi/
-```
-
----
-
-## Security
-
-- **Never commit API keys or tokens** to the repository
-- Use environment variables for secrets
-- For CI/CD, use GitHub Secrets or your platform's secret management
-- Webhook signatures are verified using HMAC-SHA256
 
 ---
 
