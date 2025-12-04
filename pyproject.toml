@@ -1,5 +1,5 @@
 [project]
-name = "zendfi-sdk"
+name = "zendfi"
 version = "0.1.0"
 description = "Python SDK for ZendFi (payments, customers, invoices, webhooks)"
 authors = [{name = "ZendFi"}]

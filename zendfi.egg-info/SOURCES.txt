@@ -23,8 +23,8 @@ zendfi/payments.py
 zendfi/subscriptions.py
 zendfi/utils.py
 zendfi/webhooks.py
-zendfi_sdk.egg-info/PKG-INFO
-zendfi_sdk.egg-info/SOURCES.txt
-zendfi_sdk.egg-info/dependency_links.txt
-zendfi_sdk.egg-info/requires.txt
-zendfi_sdk.egg-info/top_level.txt
+zendfi.egg-info/PKG-INFO
+zendfi.egg-info/SOURCES.txt
+zendfi.egg-info/dependency_links.txt
+zendfi.egg-info/requires.txt
+zendfi.egg-info/top_level.txt
